@@ -71,10 +71,10 @@ export default function Home() {
   };
 
   return (
-    <main className={"flex min-h-screen flex-col justify-start p-8 bg-slate-600"}>
+    <main className="flex min-h-screen flex-col items-center justify-start p-8 bg-slate-600">
       <header className="w-full max-w-6xl text-center py-6 border-b border-zinc-800 dark:border-zinc-700">
-        <div className="flex justify-between items-center">
-          <h1 className="text-4xl mx-auto font-bold">NEW YORK TIMES API</h1>
+        <div className="flex justify-center items-center">
+          <h1 className="text-4xl font-bold">NEW YORK TIMES API</h1>
         </div>
       </header>
 
@@ -83,9 +83,10 @@ export default function Home() {
           <p>{error}</p>
         </div>
       )}
+      
       <p className="text-center text-zinc-300 mt-2">Top stories from the New York Times</p>
 
-      <form onSubmit={handleSearch} className="w-full max-w-3xl mt-6">
+      <form onSubmit={handleSearch} className="w-full max-w-3xl mt-6 flex justify-center">
         <input
           type="text"
           placeholder="Search New York Times articles..."
