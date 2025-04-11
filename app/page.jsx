@@ -24,7 +24,7 @@ export default function Home() {
       try {
         const res = await fetch(`/api/top-stories?section=${section}&page=${page}`);
         if (!res.ok) {
-          throw new Error(`HTTP error! Status: ${res.status}`);
+          throw new Error(`HTTP error! Status: Too many requests: Refreshing in two minutes ${res.status}`);
         }
         const data = await res.json();
         const perPage = 9;
@@ -49,7 +49,7 @@ export default function Home() {
     try {
       const res = await fetch(`/api/search-articles?q=${encodeURIComponent(searchQuery)}`);
       if (!res.ok) {
-        throw new Error(`HTTP error! Status: ${res.status}`);
+        throw new Error(`HTTP error! Status: Too many requests: Refreshing in two minutes ${res.status}`);
       }
       const data = await res.json();
       const perPage = 9;
@@ -79,7 +79,7 @@ export default function Home() {
       </header>
 
       {error && (
-        <div className="w-full max-w-6xl mt-6 text-red-600 text-center">
+        <div className="w-full max-w-6xl mt-6 border text-red-400 text-center">
           <p>{error}</p>
         </div>
       )}
