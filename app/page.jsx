@@ -24,7 +24,7 @@ export default function Home() {
       try {
         const res = await fetch(`/api/top-stories?section=${section}&page=${page}`);
         if (!res.ok) {
-          throw new Error(`Error! Too many API requests: Refresh page in two minutes`);
+          throw new Error(`Error! Too many API requests: Refresh page in 30 seconds`);
         }
         const data = await res.json();
         const perPage = 9;
