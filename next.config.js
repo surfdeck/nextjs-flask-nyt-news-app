@@ -11,6 +11,9 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    domains: ['www.nytimes.com'], 
+  },
 };
 
 module.exports = nextConfig;

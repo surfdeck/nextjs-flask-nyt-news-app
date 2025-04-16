@@ -80,7 +80,6 @@ export default function Home() {
             height={0}
             width={180}
             className="rounded-t-xl"
-            priority
           />
         </div>
         <br />
