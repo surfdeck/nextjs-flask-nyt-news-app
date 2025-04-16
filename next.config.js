@@ -12,7 +12,7 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['www.nytimes.com'], 
+    domains: ['static01.nyt.com'], 
   },
 };
 
