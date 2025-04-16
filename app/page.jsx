@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import ArticleCard from '@/components/article-card/page'
+import Image from 'next/image';
 
 export default function Home() {
   const [articles, setArticles] = useState([]);
@@ -74,8 +75,18 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-start p-8 bg-slate-600">
       <header className="w-full max-w-6xl text-center py-6 border-b border-zinc-800 dark:border-zinc-700">
         <div className="flex justify-center items-center">
-          <h1 className="text-4xl font-bold">NEW YORK TIMES API</h1>
+        <Image
+            src="/nyt-api-logo.png"
+            height={0}
+            width={180}
+            className="rounded-t-xl"
+            priority
+          />
         </div>
+        <br />
+
+        <h1 className="text-4xl font-bold">NEW YORK TIMES API</h1>
+
       </header>
 
       {error && (
