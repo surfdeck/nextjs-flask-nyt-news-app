@@ -50,7 +50,7 @@ export default function ArticleCard({ article }) {
         </h2>
         {byline && (
           <p className="text-sm text-gray-600 dark:text-zinc-300 mt-2">
-            By {byline}
+            {byline}
           </p>
         )}
         {abstract && (
